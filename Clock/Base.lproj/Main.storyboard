@@ -81,10 +81,17 @@
                                     <constraint firstAttribute="width" secondItem="NMs-qr-MdU" secondAttribute="height" multiplier="4:1" id="UUc-pS-986"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-az-tTM">
+                                <rect key="frame" x="109" y="74" width="156" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Change Background"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9qc-ij-Zq4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OXv-ME-wJC"/>
+                            <constraint firstItem="Gmf-az-tTM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="Ssd-ZT-XIK"/>
+                            <constraint firstItem="Gmf-az-tTM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UUe-Li-VYu"/>
                             <constraint firstItem="9qc-ij-Zq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dGe-wa-g8z"/>
                             <constraint firstItem="NMs-qr-MdU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jdv-mB-xKg"/>
                             <constraint firstItem="NMs-qr-MdU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k9V-Ld-FSC"/>
@@ -97,6 +104,8 @@
                     </view>
                     <connections>
                         <outlet property="ap" destination="Gva-s8-plq" id="jVo-iK-XSa"/>
+                        <outlet property="backgroundView" destination="9qc-ij-Zq4" id="r9H-Iv-D5H"/>
+                        <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="Quy-g5-nJM"/>
                         <outlet property="dots" destination="Jjc-O7-P7H" id="TUO-WX-teG"/>
                         <outlet property="h1" destination="ZUZ-Fz-4aR" id="eG3-JJ-6h2"/>
                         <outlet property="h2" destination="Ha5-Ct-p3y" id="bIJ-b6-TV3"/>

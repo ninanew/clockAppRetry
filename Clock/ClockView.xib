@@ -13,15 +13,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClockView" customModule="Clock" customModuleProvider="target">
             <connections>
-                <outlet property="BottomLeftView" destination="Cf6-tJ-N8v" id="hTC-57-pSr"/>
-                <outlet property="BottomRightView" destination="tE8-zw-Kg8" id="XkL-4z-THJ"/>
-                <outlet property="BottomView" destination="kxj-kP-AAF" id="MzZ-hb-0b8"/>
-                <outlet property="MidView" destination="G13-Rf-eyn" id="MXN-8a-Cxl"/>
-                <outlet property="TopLeftView" destination="eDs-KU-v2n" id="QeG-6J-tOL"/>
-                <outlet property="TopRightView" destination="cZQ-xt-fcf" id="Hgg-XY-6Yt"/>
-                <outlet property="TopView" destination="AKZ-FM-Pfn" id="ZiR-i3-NgR"/>
+                <outlet property="bottomLeftView" destination="Cf6-tJ-N8v" id="hTC-57-pSr"/>
+                <outlet property="bottomRightView" destination="tE8-zw-Kg8" id="XkL-4z-THJ"/>
+                <outlet property="bottomView" destination="kxj-kP-AAF" id="MzZ-hb-0b8"/>
                 <outlet property="m" destination="dt2-pu-c8l" id="Vqk-Yr-Phb"/>
+                <outlet property="midView" destination="G13-Rf-eyn" id="MXN-8a-Cxl"/>
                 <outlet property="timeClockView" destination="iN0-l3-epB" id="hKT-PR-fMN"/>
+                <outlet property="topLeftview" destination="eDs-KU-v2n" id="QeG-6J-tOL"/>
+                <outlet property="topRightView" destination="cZQ-xt-fcf" id="Hgg-XY-6Yt"/>
+                <outlet property="topView" destination="AKZ-FM-Pfn" id="ZiR-i3-NgR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

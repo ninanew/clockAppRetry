@@ -9,6 +9,7 @@
 import UIKit
 
 class BlinkingTimerView: UIView {
+    
     @IBOutlet weak var dots: UILabel!
     
     var showDots: Bool = false
@@ -22,10 +23,8 @@ class BlinkingTimerView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-         prepare()
+        prepare()
     }
-    
-  
     
     override func awakeFromNib() {
         print("LOADED BLINK")
@@ -34,20 +33,15 @@ class BlinkingTimerView: UIView {
     
     func blinking () {
         showDots = !showDots
-        
         if showDots {
-            print("HEY")
+//            print("HEY")
             dots.isHidden = showDots
         }
     }
-    
     
     func prepare() {
         Bundle.main.loadNibNamed("BlinkingTimerView", owner: self, options: nil)
         self.addSubview(self.dotsNib)
         dotsNib.frame = bounds
-        
     }
-    
-    
 }

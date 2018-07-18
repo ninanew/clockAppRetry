@@ -107,8 +107,7 @@
                     </view>
                     <connections>
                         <outlet property="ap" destination="Gva-s8-plq" id="jVo-iK-XSa"/>
-                        <outlet property="backgroundView" destination="9qc-ij-Zq4" id="r9H-Iv-D5H"/>
-                        <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="Quy-g5-nJM"/>
+                        <outlet property="backgroundView" destination="9qc-ij-Zq4" id="OjW-O7-DAm"/>
                         <outlet property="dots" destination="Jjc-O7-P7H" id="TUO-WX-teG"/>
                         <outlet property="h1" destination="ZUZ-Fz-4aR" id="eG3-JJ-6h2"/>
                         <outlet property="h2" destination="Ha5-Ct-p3y" id="bIJ-b6-TV3"/>
@@ -123,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsViewController-->
         <scene sceneID="UUY-gq-QO9">
             <objects>
-                <viewController id="UrU-sg-ULM" sceneMemberID="viewController">
+                <viewController id="UrU-sg-ULM" userLabel="SettingsViewController" customClass="SettingsViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Hy-rG-vS7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,13 +175,6 @@
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-Z1-LZf">
-                                <rect key="frame" x="82" y="279" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Standard Time">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOS-fg-m0C">
                                 <rect key="frame" x="198" y="279" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -200,10 +192,27 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="uoT-DP-LPo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-Z1-LZf">
+                                <rect key="frame" x="82" y="279" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Standard Time">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="w01-Mi-FAP"/>
                     </view>
+                    <connections>
+                        <outlet property="blueButton" destination="b9N-kk-FtC" id="bgh-i8-BLb"/>
+                        <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="YM7-m7-rgc"/>
+                        <outlet property="greenButton" destination="CnH-E1-QIZ" id="ay5-1C-UPX"/>
+                        <outlet property="militaryTime" destination="HOS-fg-m0C" id="evU-L0-lis"/>
+                        <outlet property="purpleButton" destination="fg7-ug-RUd" id="1Vs-yR-ydT"/>
+                        <outlet property="redButton" destination="37r-bU-Tyf" id="tDC-hL-ANw"/>
+                        <outlet property="settingsView" destination="1Hy-rG-vS7" id="onl-Md-2cR"/>
+                        <outlet property="standardTime" destination="sWg-Z1-LZf" id="39Z-Hi-2S0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-6S-sfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

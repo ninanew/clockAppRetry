@@ -10,8 +10,6 @@ import UIKit
 
 extension UIColor {
 
-   // func 
-
     convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
 
         self.init(
@@ -29,10 +27,21 @@ extension UIColor {
             green: (hex >> 8) & 0xFF,
             blue : hex & 0xFF
 
-        )
+            )
 
-    }
-
+        }
+        
+//        func updateFontColor(hex: String) {
+//            switch hex {
+//            case "red":
+//                topView.alpha = 1
+//                topLeftview.alpha = 1
+//                topRightView.alpha = 1
+//                bottomLeftView.alpha = 1
+//                bottomRightView.alpha = 1
+//                bottomView.alpha = 1
+//
+//            }
+//        }
+    
 }
-
-

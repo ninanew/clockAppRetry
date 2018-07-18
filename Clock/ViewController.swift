@@ -20,15 +20,10 @@ final class ViewController: UIViewController {
     @IBOutlet weak var ap: ClockView!
     @IBOutlet weak var mm: ClockView!
     @IBOutlet weak var backgroundView: UIImageView!
-    @IBOutlet weak var changeBackgroundButton: UIButton!
     
     var showDots: Bool = false
     
-    var currentBackground = UserDefaults.standard.currentBackground {
-        didSet {
-            updateBackground()
-        }
-    }
+    
     
     private struct TimeFormat {
         static let twelveHourFormat = "hh:mm:ss a"
@@ -46,20 +41,14 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    //    self.view. = UIColor.blue
+    //    self.view.'' = UIColor.blue to change font color
         
-        backgroundView.image = currentBackground.image
-        changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //don't forget to call super when you override a func - you're saying "i'm adding functionality to this, but still want all the good stuff this function does in the super class"
         super.viewWillAppear(animated)
         startTimer()
-    }
-    
-    private func updateBackground() {
-        backgroundView.image = currentBackground.image
     }
     
     func blinking () {
@@ -108,25 +97,7 @@ final class ViewController: UIViewController {
             timer!.invalidate()
             timer = nil
         }
+    
     }
     
-    @objc private func showBackgroundOptions() {
-        let selectionAlert = UIAlertController(title: "", message: "Select Background", preferredStyle: .actionSheet)
-        
-        //use enumeration to loop through all the possible values
-        ClockBackground.allValues.forEach { background in
-            let action = UIAlertAction(title: background.title, style: .default) { [weak self] _ in
-                UserDefaults.standard.set(background: background) //update the stored user defaults
-                self?.currentBackground = background //and update the local var
-            }
-            
-            selectionAlert.addAction(action)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-        
-        selectionAlert.addAction(cancelAction)
-        
-        present(selectionAlert, animated: true, completion: nil)
-    }
 }

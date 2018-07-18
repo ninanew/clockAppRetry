@@ -156,7 +156,7 @@ class ClockView: UIView {
 }
         
     
-    
+    // use updateDigit to change font colors 
 
 
 

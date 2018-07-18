@@ -20,6 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var ap: ClockView!
     @IBOutlet weak var mm: ClockView!
     @IBOutlet weak var backgroundView: UIImageView!
+    //Issue one - delete this guy
 //    @IBOutlet weak var changeBackgroundButton: UIButton!
     
     var showDots: Bool = false
@@ -49,6 +50,7 @@ final class ViewController: UIViewController {
     //    self.view. = UIColor.blue
         
         backgroundView.image = currentBackground.image
+        //issue 2 - remove code referencing the button
 //        changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
     }
     

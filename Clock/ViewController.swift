@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var ap: ClockView!
     @IBOutlet weak var mm: ClockView!
     @IBOutlet weak var backgroundView: UIImageView!
-    @IBOutlet weak var changeBackgroundButton: UIButton!
+//    @IBOutlet weak var changeBackgroundButton: UIButton!
     
     var showDots: Bool = false
     
@@ -49,7 +49,7 @@ final class ViewController: UIViewController {
     //    self.view. = UIColor.blue
         
         backgroundView.image = currentBackground.image
-        changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
+//        changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {

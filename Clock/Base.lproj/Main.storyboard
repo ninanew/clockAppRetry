@@ -108,7 +108,6 @@
                     <connections>
                         <outlet property="ap" destination="Gva-s8-plq" id="jVo-iK-XSa"/>
                         <outlet property="backgroundView" destination="9qc-ij-Zq4" id="r9H-Iv-D5H"/>
-                        <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="Quy-g5-nJM"/>
                         <outlet property="dots" destination="Jjc-O7-P7H" id="TUO-WX-teG"/>
                         <outlet property="h1" destination="ZUZ-Fz-4aR" id="eG3-JJ-6h2"/>
                         <outlet property="h2" destination="Ha5-Ct-p3y" id="bIJ-b6-TV3"/>

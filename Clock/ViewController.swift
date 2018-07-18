@@ -46,6 +46,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    //    self.view. = UIColor.blue
+        
         backgroundView.image = currentBackground.image
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
     }

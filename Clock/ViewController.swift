@@ -26,7 +26,6 @@ final class ViewController: UIViewController {
     var showDots: Bool = false
     
     
-    
     private struct TimeFormat {
         static let twelveHourFormat = "hh:mm:ss a"
         static let twentyFourHourFormat = "HH:mm:ss"

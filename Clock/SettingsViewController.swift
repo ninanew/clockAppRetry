@@ -20,6 +20,18 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var militaryTime: UIButton!
     
     
+    struct TimeFormat {
+        
+    static let twentyFourHourFormat = "HH:mm:ss"
+        
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = TimeFormat.twentyFourHourFormat
+        return formatter
+    }()
+    
+    private var timer: Timer?
+    
     private func updateBackground() { backgroundView.image = currentBackground.image
         
     }
@@ -31,9 +43,6 @@ class SettingsViewController: UIViewController {
         }
     
 }
-    
-        override func viewDidLoad() {
-        super.viewDidLoad()
         
         backgroundView.image = currentBackground.image
         
@@ -66,4 +75,3 @@ class SettingsViewController: UIViewController {
         //    self.view.'' = UIColor.blue
         
     }
-

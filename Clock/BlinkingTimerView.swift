@@ -34,7 +34,6 @@ class BlinkingTimerView: UIView {
     func blinking () {
         showDots = !showDots
         if showDots {
-//            print("HEY")
             dots.isHidden = showDots
         }
     }
@@ -43,5 +42,9 @@ class BlinkingTimerView: UIView {
         Bundle.main.loadNibNamed("BlinkingTimerView", owner: self, options: nil)
         self.addSubview(self.dotsNib)
         dotsNib.frame = bounds
+    }
+    
+    func setColor(choice: ColorChoice) {
+        dots.textColor = choice.uiColor
     }
 }

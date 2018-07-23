@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     @IBOutlet var settingsView: UIView!
     @IBOutlet weak var changeBackgroundButton: UIButton!
@@ -19,10 +19,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var standardTime: UIButton!
     @IBOutlet weak var militaryTime: UIButton!
     
-    
     struct TimeFormat {
-        
-    static let twentyFourHourFormat = "HH:mm:ss"
+        static let twentyFourHourFormat = "HH:mm:ss"
+    }
         
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -30,48 +29,61 @@ class SettingsViewController: UIViewController {
         return formatter
     }()
     
-    private var timer: Timer?
-    
-    private func updateBackground() { backgroundView.image = currentBackground.image
-        
-    }
-    
-    var currentBackground = UserDefaults.standard.currentBackground {
-        didSet {
-            updateBackground()
-            
-        }
-    
-}
-        
-        backgroundView.image = currentBackground.image
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
+        //group into an array quickly
+        let buttons = [purpleButton, blueButton, redButton, greenButton]
         
+        //use the enumerated() function to get the index and the object
+        buttons.enumerated().forEach { (index, button) in
+            button?.tag = index //assign the index to the button tag
+            button?.addTarget(self, action: #selector(switchColor(forButton:)), for: .touchUpInside)
+        }
+        updateColorSelection()
+    }
+    
+    func updateColorSelection() {
+        let buttons = [purpleButton, blueButton, redButton, greenButton]
 
-        func showBackgroundOptions() {
+        let tag = UserDefaults.standard.currentColor.rawValue
         
-        let selectionAlert = UIAlertController(title: "", message: "Select Background", preferredStyle: .actionSheet)
-        
-        //use enumeration to loop through all the possible values
-        ClockBackground.allValues.forEach { background in
-            let action = UIAlertAction(title: background.title, style: .default) { [weak self] _ in
-                UserDefaults.standard.set(background: background) //update the stored user defaults
-                self?.currentBackground = background //and update the local var
+        buttons.enumerated().forEach { (index, button) in
+            if index == tag {
+                button?.layer.borderColor = UIColor.black.cgColor
+                button?.layer.borderWidth = 2.0
+            } else {
+                button?.layer.borderWidth = 0.0
+            }
+        }
+    }
+
+    //you need to use the "@objc" syntax here because the addTarget we use above is ANCIENT and relies on Obj-C, so we need to let the compiler know 'hey, mark this one for the objc pile
+    @objc func showBackgroundOptions() {
+            let selectionAlert = UIAlertController(title: "", message: "Select Background", preferredStyle: .actionSheet)
+            
+            //use enumeration to loop through all the possible values
+            ClockBackground.allValues.forEach { background in
+                let action = UIAlertAction(title: background.title, style: .default) { [weak self] _ in
+                    UserDefaults.standard.set(background: background) //update the stored user defaults
+                }
+                selectionAlert.addAction(action)
             }
             
-            selectionAlert.addAction(action)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-        
-        selectionAlert.addAction(cancelAction)
-        
-        present(selectionAlert, animated: true, completion: nil)
-        
-            }
-        }
-        
-        //    self.view.'' = UIColor.blue
-        
+            let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+            
+            selectionAlert.addAction(cancelAction)
+            
+            present(selectionAlert, animated: true, completion: nil)
     }
+    
+    @objc func switchColor(forButton button: UIButton) {
+        if let colorChoice = ColorChoice(rawValue: button.tag) {
+            UserDefaults.standard.set(color: colorChoice)
+            updateColorSelection()
+        }
+    }
+}
+
+

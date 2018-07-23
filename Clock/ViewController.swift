@@ -21,10 +21,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var mm: ClockView!
     @IBOutlet weak var backgroundView: UIImageView!
     
-    
-    
     var showDots: Bool = false
-    
     
     private struct TimeFormat {
         static let twelveHourFormat = "hh:mm:ss a"
@@ -41,15 +38,25 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    //    self.view.'' = UIColor.blue to change font color
-        
+        //
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //don't forget to call super when you override a func - you're saying "i'm adding functionality to this, but still want all the good stuff this function does in the super class"
         super.viewWillAppear(animated)
         startTimer()
+        
+        //the image may have been changed in settings, so check here for the latest image...
+        backgroundView.image = UserDefaults.standard.currentBackground.image
+        updateColors()
+    }
+    
+    func updateColors() {
+        let clockComponents = [h1, h2, m1, m2, s1, s2, ap, mm]
+        clockComponents.forEach { component in
+            component?.setColor(withChoice: UserDefaults.standard.currentColor)
+        }
+        dots.setColor(choice: UserDefaults.standard.currentColor)
     }
     
     func blinking () {
@@ -72,9 +79,8 @@ final class ViewController: UIViewController {
                 var dateArray = [Character]()
                 for char in currentDate {
                     dateArray.append(char)
-//                    print(char)
-                    
                 }
+                
                 self?.h1.updateDigit(digit: dateArray[0])
                 self?.h2.updateDigit(digit: dateArray[1])
                 self?.m1.updateDigit(digit: dateArray[3])
@@ -85,7 +91,6 @@ final class ViewController: UIViewController {
                 self?.mm.updateDigit(digit: dateArray[10])
                 
                 self?.blinking()
-//                print(currentDate)
             })
         } else {
             stopTimer()
@@ -97,11 +102,6 @@ final class ViewController: UIViewController {
         if timer != nil {
             timer!.invalidate()
             timer = nil
-        
-            }
-    
         }
-    
     }
-
 }

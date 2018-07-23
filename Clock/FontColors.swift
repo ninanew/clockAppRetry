@@ -8,40 +8,33 @@
 
 import UIKit
 
-extension UIColor {
-
-    convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
-
-        self.init(
-            red : CGFloat(red) / 255.0,
-            green : CGFloat(green) / 255.0,
-            blue : CGFloat(blue) / 255.0,
-            alpha : a
-        )
-
-    }
-
-    convenience init(hex: Int, a: CGFloat = 1.0) {
-        self.init(
-            red: (hex >> 16) & 0xFF,
-            green: (hex >> 8) & 0xFF,
-            blue : hex & 0xFF
-
-            )
-
-        }
-        
-//        func updateFontColor(hex: String) {
-//            switch hex {
-//            case "red":
-//                topView.alpha = 1
-//                topLeftview.alpha = 1
-//                topRightView.alpha = 1
-//                bottomLeftView.alpha = 1
-//                bottomRightView.alpha = 1
-//                bottomView.alpha = 1
-//
-//            }
-//        }
+enum ColorChoice: Int, EnumIterable {
     
+    case purple
+    case blue
+    case red
+    case green
+    
+    var uiColor: UIColor {
+        switch self {
+        case .purple: return UIColor.purple
+        case .blue: return UIColor.blue
+        case .red: return UIColor.red
+        case .green: return UIColor.green
+        }
+    }
+}
+
+extension UserDefaults {
+    
+    private static var storageKey = "ClockColorKey"
+    
+    func set(color: ColorChoice) {
+        UserDefaults.standard.set(color.rawValue, forKey: UserDefaults.storageKey)
+    }
+    
+    var currentColor: ColorChoice {
+        guard let storedValue = UserDefaults.standard.value(forKey: UserDefaults.storageKey) as? Int else { return .purple }
+        return ColorChoice(rawValue: storedValue) ?? .purple
+    }
 }

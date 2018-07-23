@@ -9,10 +9,10 @@
 import UIKit
 
 @IBDesignable
-class ClockView: UIView {
+final class ClockView: UIView {
     
     //DontPascalCaseVariableNames!
-    @IBOutlet var timeClockView: UIView!
+    @IBOutlet weak var timeClockView: UIView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var topLeftview: UIView!
     @IBOutlet weak var topRightView: UIView!
@@ -31,8 +31,7 @@ class ClockView: UIView {
    
     private func commonInit() {
         let nibName = "ClockView"
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
+        let nib = UINib(nibName: nibName, bundle: nil) //you can leave the bundle nil - it defaults the 'current' bundle
         // 'v' is not a variable name - always be descriptive. Maybe something like 'mainView' etc etc. Also don't break function calls up into multiple lines unless you CANNOT fit them on the screen!
         if let v = nib.instantiate(withOwner: self, options: nil).first as? UIView {
             //we if let here to avoid the "!" force unwrap. Guard would do too. Just be aware if you've got the wrong nib, you're view will be blank, but that's still better than a crash
@@ -153,10 +152,17 @@ class ClockView: UIView {
         bottomView.alpha = 0.1
         m.alpha = 0
     }
-}
-        
     
-    // use updateDigit to change font colors 
-
+    func setColor(withChoice choice: ColorChoice) {
+        topView.backgroundColor = choice.uiColor
+        topLeftview.backgroundColor = choice.uiColor
+        topRightView.backgroundColor = choice.uiColor
+        midView.backgroundColor = choice.uiColor
+        bottomView.backgroundColor = choice.uiColor
+        bottomLeftView.backgroundColor = choice.uiColor
+        bottomRightView.backgroundColor = choice.uiColor
+        clearDigit()
+    }
+}
 
 

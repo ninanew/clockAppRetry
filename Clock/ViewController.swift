@@ -21,6 +21,8 @@ final class ViewController: UIViewController {
     @IBOutlet weak var mm: ClockView!
     @IBOutlet weak var backgroundView: UIImageView!
     
+    
+    
     var showDots: Bool = false
     
     
@@ -96,8 +98,11 @@ final class ViewController: UIViewController {
         if timer != nil {
             timer!.invalidate()
             timer = nil
+        
+            }
+    
         }
     
     }
-    
+
 }

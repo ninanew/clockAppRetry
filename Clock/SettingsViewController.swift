@@ -21,13 +21,16 @@ class SettingsViewController: UIViewController {
     
     
     private func updateBackground() { backgroundView.image = currentBackground.image
-        }
+        
+    }
     
     var currentBackground = UserDefaults.standard.currentBackground {
         didSet {
             updateBackground()
-    
+            
         }
+    
+}
     
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,7 @@ class SettingsViewController: UIViewController {
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
         
 
-    @objc private func showBackgroundOptions() {
+        func showBackgroundOptions() {
         
         let selectionAlert = UIAlertController(title: "", message: "Select Background", preferredStyle: .actionSheet)
         
@@ -63,4 +66,4 @@ class SettingsViewController: UIViewController {
         //    self.view.'' = UIColor.blue
         
     }
-}
+

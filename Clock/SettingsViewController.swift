@@ -18,19 +18,24 @@ final class SettingsViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var standardTime: UIButton!
     @IBOutlet weak var militaryTime: UIButton!
+    @IBOutlet weak var timeZones: UIPickerView!
     
-    struct TimeFormat {
-        static let twentyFourHourFormat = "HH:mm:ss"
-    }
-        
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = TimeFormat.twentyFourHourFormat
-        return formatter
-    }()
+    
+//    struct TimeFormat {
+//        static let twentyFourHourFormat = "HH:mm:ss"
+//    }
+//
+//    private let dateFormatter: DateFormatter = {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = TimeFormat.twentyFourHourFormat
+//        return formatter
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timeZones.dataSource = self
+        timeZones.delegate = self
         
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
         //group into an array quickly
@@ -84,6 +89,28 @@ final class SettingsViewController: UIViewController {
             updateColorSelection()
         }
     }
+    
+    @IBAction func standardTime(_ sender: UIButton) {
+        if sender.currentTitle == "Military Time" {
+            UserDefaults.standard.set(true, forKey: "isMilitaryTime")
+        } else {
+            UserDefaults.standard.set(false, forKey: "isMilitaryTime")
+
+        }
+        
+    }
+    
 }
 
+extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
+    
+    
+}
 

@@ -22,6 +22,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIImageView!
     
     var showDots: Bool = false
+    var isMilitaryTime = false
     
     private struct TimeFormat {
         static let twelveHourFormat = "hh:mm:ss a"
@@ -30,7 +31,11 @@ final class ViewController: UIViewController {
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = TimeFormat.twelveHourFormat
+        if UserDefaults.standard.bool(forKey: "isMilitaryTime") {
+            formatter.dateFormat = TimeFormat.twentyFourHourFormat
+        } else {
+            formatter.dateFormat = TimeFormat.twelveHourFormat
+        }
         return formatter
     }()
     
@@ -49,6 +54,9 @@ final class ViewController: UIViewController {
         //the image may have been changed in settings, so check here for the latest image...
         backgroundView.image = UserDefaults.standard.currentBackground.image
         updateColors()
+        
+        isMilitaryTime = UserDefaults.standard.bool(forKey: "isMilitaryTime")
+
     }
     
     func updateColors() {
@@ -87,8 +95,14 @@ final class ViewController: UIViewController {
                 self?.m2.updateDigit(digit: dateArray[4])
                 self?.s1.updateDigit(digit: dateArray[6])
                 self?.s2.updateDigit(digit: dateArray[7])
-                self?.ap.updateDigit(digit: dateArray[9])
-                self?.mm.updateDigit(digit: dateArray[10])
+                
+                if let isMilitaryTime = self?.isMilitaryTime {
+                    if !isMilitaryTime {
+                        self?.ap.updateDigit(digit: dateArray[9])
+                        self?.mm.updateDigit(digit: dateArray[10])
+                    }
+                }
+               
                 
                 self?.blinking()
             })

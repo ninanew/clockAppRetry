@@ -45,4 +45,7 @@ struct TimeZones {
         "Europe/Lisbon",
         "Asia/Jakarta"
     ]
+    
+    static var storageKey = "timeZone" //all 'keys' or otherwise should always be made into a static var - don't leave them as string literals to be typed out - it's just begging for typos / bugs
+    
 }

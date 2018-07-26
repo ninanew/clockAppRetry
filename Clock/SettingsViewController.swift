@@ -20,13 +20,19 @@ final class SettingsViewController: UIViewController {
     @IBOutlet weak var militaryTime: UIButton!
     @IBOutlet weak var changeTimeZones: UIPickerView!
     
-    let timezoneArray = TimeZones.timeZonesArray
+    private let storageKey = "isMilitaryTime"
+    
+    private let isMilitaryTime: Bool = UserDefaults.standard.bool(forKey: "isMilitaryTime")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         changeTimeZones.dataSource = self
         changeTimeZones.delegate = self
+        
+        //setup our targets / actions for our buttons defined in storyboards
+        militaryTime.addTarget(self, action: #selector(militButtonTapped), for: .touchUpInside)
+        standardTime.addTarget(self, action: #selector(standardTime), for: .touchUpInside)
         
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
         //group into an array quickly
@@ -39,8 +45,9 @@ final class SettingsViewController: UIViewController {
         }
         updateColorSelection()
         
-        changeTimeZones.selectRow(timezoneArray[row], Int, inComponent: 0, animated: Bool)
-        
+        if let selectedTimezoneRow = UserDefaults.standard.value(forKey: TimeZones.storageKey) as? Int {
+            changeTimeZones.selectRow(selectedTimezoneRow, inComponent: 0, animated: true)
+        }
     }
     
     func updateColorSelection() {
@@ -84,25 +91,16 @@ final class SettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func standardTime(_ sender: UIButton) {
-        if sender.currentTitle == "Military Time" {
-            UserDefaults.standard.set(true, forKey: "isMilitaryTime")
-        } else {
-            UserDefaults.standard.set(false, forKey: "isMilitaryTime")
-        
-        }
- 
+    @IBAction func setStandardTime() {
+        UserDefaults.standard.set(false, forKey: "isMilitaryTime")
+        //do any UI updates
     }
     
-//    @IBOutlet weak var stdButtonTapped: UIButton!
-//    @IBOutlet weak var militButtonTapped (sender: AnyObject) {
-//        if militButtonTapped.titleLabel?.backgroundColor == UIColor.redColor() {
-//        militaryTime.backgroundColor = UIColor.clear()
-//        }
-//        else if militaryTime.backgroundColor == UIColor.clear() {
-//            militaryTime.titleLabel?.backgroundColor = UIColor.redColor()
-//        }
-//    }
+    //dispense with the IBOutlets/Actions - it's confusing and leads to crashes in my humble opinion. Just user regular funcs and add them as targets of your button. Bonus: no need to pass a variable
+    @objc func militButtonTapped() {
+        UserDefaults.standard.set(false, forKey: "isMilitaryTime")
+        //do any UI updates
+    }
 }
 
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -111,19 +109,17 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timezoneArray.count
+        return TimeZones.timeZonesArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return timezoneArray[row]
+        return TimeZones.timeZonesArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        UserDefaults.standard.set(timezoneArray[row], forKey: "timeZone")
-        
-        }
-
+        UserDefaults.standard.set(row, forKey: TimeZones.storageKey)
     }
+}
     
 
 

@@ -190,9 +190,6 @@
                                 <state key="normal" title="Standard Time">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="pFt-v8-hph"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Font Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-fJ-oRk">
                                 <rect key="frame" x="20" y="115" width="374" height="20.333333333333343"/>
@@ -233,10 +230,6 @@
                                 <state key="normal" title="Military Time">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="hrButtonTapped:" destination="UrU-sg-ULM" eventType="touchUpInside" id="mns-NL-aaI"/>
-                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="Cog-J9-g6g"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,13 +321,10 @@
                         <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="YM7-m7-rgc"/>
                         <outlet property="changeTimeZones" destination="89T-gN-YP6" id="NDr-zV-vb3"/>
                         <outlet property="greenButton" destination="CnH-E1-QIZ" id="ay5-1C-UPX"/>
-                        <outlet property="militButtonTapped" destination="HOS-fg-m0C" id="9FE-TJ-Epn"/>
                         <outlet property="militaryTime" destination="HOS-fg-m0C" id="evU-L0-lis"/>
                         <outlet property="purpleButton" destination="fg7-ug-RUd" id="1Vs-yR-ydT"/>
                         <outlet property="redButton" destination="37r-bU-Tyf" id="tDC-hL-ANw"/>
                         <outlet property="settingsView" destination="1Hy-rG-vS7" id="onl-Md-2cR"/>
-                        <outlet property="standardTime" destination="sWg-Z1-LZf" id="39Z-Hi-2S0"/>
-                        <outlet property="stdButtonTapped" destination="sWg-Z1-LZf" id="tSo-ON-nW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-6S-sfl" userLabel="First Responder" sceneMemberID="firstResponder"/>

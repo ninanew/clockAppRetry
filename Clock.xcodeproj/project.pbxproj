@@ -12,6 +12,7 @@
 		EB19FB6720D993E7002EA2E6 /* BlinkingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19FB6620D993E7002EA2E6 /* BlinkingTimerView.swift */; };
 		EB80B9A220FF9AC3007FBCB1 /* FontColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80B9A120FF9AC3007FBCB1 /* FontColors.swift */; };
 		EB80B9A620FFC584007FBCB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80B9A520FFC584007FBCB1 /* SettingsViewController.swift */; };
+		EBD39E50210927870055BD87 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD39E4F210927870055BD87 /* Timezones.swift */; };
 		EBF735F920D032B20026FFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF735F820D032B20026FFFA /* AppDelegate.swift */; };
 		EBF735FB20D032B20026FFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF735FA20D032B20026FFFA /* ViewController.swift */; };
 		EBF735FE20D032B20026FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF735FC20D032B20026FFFA /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		EB19FB6620D993E7002EA2E6 /* BlinkingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingTimerView.swift; sourceTree = "<group>"; };
 		EB80B9A120FF9AC3007FBCB1 /* FontColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontColors.swift; sourceTree = "<group>"; };
 		EB80B9A520FFC584007FBCB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EBD39E4F210927870055BD87 /* Timezones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezones.swift; sourceTree = "<group>"; };
 		EBF735F520D032B20026FFFA /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF735F820D032B20026FFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF735FA20D032B20026FFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				EBF7361420D03BC50026FFFA /* ClockView.swift */,
 				4636802C20FE740F00DC1C0B /* ClockBackground.swift */,
 				EB80B9A120FF9AC3007FBCB1 /* FontColors.swift */,
+				EBD39E4F210927870055BD87 /* Timezones.swift */,
 				EBF7361620D971A90026FFFA /* BlinkingTimerView.xib */,
 				EB19FB6620D993E7002EA2E6 /* BlinkingTimerView.swift */,
 				4636802E20FE78BB00DC1C0B /* EnumIterable.swift */,
@@ -166,6 +169,7 @@
 				4636802D20FE740F00DC1C0B /* ClockBackground.swift in Sources */,
 				EBF7361520D03BC50026FFFA /* ClockView.swift in Sources */,
 				EB80B9A220FF9AC3007FBCB1 /* FontColors.swift in Sources */,
+				EBD39E50210927870055BD87 /* Timezones.swift in Sources */,
 				4636802F20FE78BB00DC1C0B /* EnumIterable.swift in Sources */,
 				EBF735F920D032B20026FFFA /* AppDelegate.swift in Sources */,
 				EB80B9A620FFC584007FBCB1 /* SettingsViewController.swift in Sources */,

@@ -18,8 +18,9 @@ final class SettingsViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var standardTime: UIButton!
     @IBOutlet weak var militaryTime: UIButton!
-    @IBOutlet weak var timeZones: UIPickerView!
+    @IBOutlet weak var changeTimeZones: UIPickerView!
     
+    let timezoneArray = TimeZones.timeZonesArray
     
 //    struct TimeFormat {
 //        static let twentyFourHourFormat = "HH:mm:ss"
@@ -34,8 +35,8 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeZones.dataSource = self
-        timeZones.delegate = self
+        changeTimeZones.dataSource = self
+        changeTimeZones.delegate = self
         
         changeBackgroundButton.addTarget(self, action: #selector(showBackgroundOptions), for: .touchUpInside)
         //group into an array quickly
@@ -47,6 +48,9 @@ final class SettingsViewController: UIViewController {
             button?.addTarget(self, action: #selector(switchColor(forButton:)), for: .touchUpInside)
         }
         updateColorSelection()
+        
+        
+       // changeTimeZones.selectRow(<#T##row: Int##Int#>, inComponent: 0, animated: f)
     }
     
     func updateColorSelection() {
@@ -95,22 +99,44 @@ final class SettingsViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isMilitaryTime")
         } else {
             UserDefaults.standard.set(false, forKey: "isMilitaryTime")
-
-        }
         
+        }
+ 
     }
     
+//    @IBOutlet weak var stdButtonTapped: UIButton!
+//    @IBOutlet weak var militButtonTapped (sender: AnyObject) {
+//        if militButtonTapped.titleLabel?.backgroundColor == UIColor.redColor() {
+//        militaryTime.backgroundColor = UIColor.clear()
+//        }
+//        else if militaryTime.backgroundColor == UIColor.clear() {
+//            militaryTime.titleLabel?.backgroundColor = UIColor.redColor()
+//        }
+//    }
 }
 
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 1
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return timezoneArray.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return timezoneArray[row]
+    }
     
-}
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        UserDefaults.standard.set(timezoneArray[row], forKey: "timeZone")
+        
+ //   func selectRow() {
+ //       row: Int; component
+            
+        }
+
+    }
+    
+
 

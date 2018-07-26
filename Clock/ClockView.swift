@@ -37,6 +37,7 @@ final class ClockView: UIView {
             //we if let here to avoid the "!" force unwrap. Guard would do too. Just be aware if you've got the wrong nib, you're view will be blank, but that's still better than a crash
             timeClockView.frame = self.bounds
             timeClockView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            backgroundColor = UIColor.clear
             addSubview(v)
         }
     }

@@ -36,6 +36,11 @@ final class ViewController: UIViewController {
         } else {
             formatter.dateFormat = TimeFormat.twelveHourFormat
         }
+        if let timezoneString = UserDefaults.standard.object(forKey: "timeZone") as? String {
+            formatter.timeZone = TimeZone(identifier: timezoneString)
+            
+        }
+//        formatter.timeZone = 
         return formatter
     }()
     
@@ -65,6 +70,7 @@ final class ViewController: UIViewController {
             component?.setColor(withChoice: UserDefaults.standard.currentColor)
         }
         dots.setColor(choice: UserDefaults.standard.currentColor)
+        dots.backgroundColor = UIColor.clear
     }
     
     func blinking () {

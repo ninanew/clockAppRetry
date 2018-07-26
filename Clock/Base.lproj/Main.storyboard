@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,60 +16,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-clock-background-6" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qc-ij-Zq4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NMs-qr-MdU">
-                                <rect key="frame" x="0.0" y="286.5" width="375" height="94"/>
+                                <rect key="frame" x="0.0" y="316.33333333333331" width="414" height="103.33333333333331"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-Fz-4aR" userLabel="H" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="103.33333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-Ct-p3y" userLabel="HH" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="0.0" width="55.5" height="94"/>
+                                        <rect key="frame" x="70.333333333333329" y="0.0" width="62.333333333333329" height="103.33333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjc-O7-P7H" userLabel="Dots" customClass="BlinkingTimerView" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="127.5" y="0.0" width="56" height="94"/>
+                                        <rect key="frame" x="140.66666666666666" y="0.0" width="62.333333333333343" height="103.33333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBv-UC-2nM" userLabel="M" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="191.5" y="0.0" width="56" height="94"/>
+                                        <rect key="frame" x="211" y="0.0" width="62.333333333333314" height="103.33333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9A-f1-HSf" userLabel="MM" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="255.5" y="0.0" width="55.5" height="94"/>
+                                        <rect key="frame" x="281.33333333333331" y="0.0" width="62.333333333333314" height="103.33333333333333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lig-xv-T1g">
-                                        <rect key="frame" x="319" y="0.0" width="56" height="94"/>
+                                        <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="103.33333333333333"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="igc-D1-QSW">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="48.666666666666664"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gva-s8-plq" userLabel="ap" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="26" height="44"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="48.666666666666664"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-Ns-0TP" userLabel="mm" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                                        <rect key="frame" x="30" y="0.0" width="26" height="44"/>
+                                                        <rect key="frame" x="33.333333333333314" y="0.0" width="29" height="48.666666666666664"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Gd-sGf">
-                                                <rect key="frame" x="0.0" y="50" width="56" height="44"/>
+                                                <rect key="frame" x="0.0" y="54.666666666666686" width="62.333333333333336" height="48.666666666666657"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTX-W4-1jF" userLabel="S" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="26" height="44"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="48.666666666666664"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-Gu-SiQ" userLabel="SS" customClass="ClockView" customModule="Clock" customModuleProvider="target">
-                                                        <rect key="frame" x="30" y="0.0" width="26" height="44"/>
+                                                        <rect key="frame" x="33.333333333333314" y="0.0" width="29" height="48.666666666666664"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
@@ -83,7 +82,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyN-c2-b4f">
-                                <rect key="frame" x="8" y="400.5" width="359" height="30"/>
+                                <rect key="frame" x="8" y="439.66666666666669" width="398" height="30"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -131,18 +130,18 @@
             <objects>
                 <viewController id="UrU-sg-ULM" userLabel="SettingsViewController" customClass="SettingsViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Hy-rG-vS7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-az-tTM">
-                                <rect key="frame" x="20" y="74" width="335" height="33"/>
+                                <rect key="frame" x="20" y="74" width="374" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Change Background">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IPz-3D-6K8">
-                                <rect key="frame" x="142.5" y="159.5" width="90" height="90"/>
+                                <rect key="frame" x="162" y="159.33333333333334" width="90" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-GZ-Nju">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -186,87 +185,164 @@
                                     <constraint firstAttribute="height" constant="90" id="YhD-Ri-vY9"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOS-fg-m0C">
-                                <rect key="frame" x="191" y="256.5" width="88" height="30"/>
-                                <state key="normal" title="Military Time">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="Cog-J9-g6g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jg-wh-pzT">
-                                <rect key="frame" x="170" y="519" width="34" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="uoT-DP-LPo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-Z1-LZf">
-                                <rect key="frame" x="82" y="256.5" width="101" height="30"/>
+                                <rect key="frame" x="82" y="266.33333333333331" width="101" height="30"/>
                                 <state key="normal" title="Standard Time">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="WcT-I8-80h"/>
+                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="pFt-v8-hph"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-xE-Gw5">
-                                <rect key="frame" x="0.0" y="295" width="375" height="200"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Font Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-fJ-oRk">
-                                <rect key="frame" x="20" y="115" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="115" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="89T-gN-YP6">
+                                <rect key="frame" x="0.0" y="293" width="414" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="Meo-09-iOd"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Meo-09-iOd"/>
+                                    </mask>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jg-wh-pzT">
+                                <rect key="frame" x="190" y="494.66666666666669" width="34" height="27.000000000000057"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="mDN-TX-Y66"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="mDN-TX-Y66"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uoT-DP-LPo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOS-fg-m0C">
+                                <rect key="frame" x="229" y="266" width="88" height="30"/>
+                                <state key="normal" title="Military Time">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hrButtonTapped:" destination="UrU-sg-ULM" eventType="touchUpInside" id="mns-NL-aaI"/>
+                                    <action selector="standardTime:" destination="UrU-sg-ULM" eventType="touchUpInside" id="Cog-J9-g6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HOS-fg-m0C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sWg-Z1-LZf" secondAttribute="trailing" constant="8" symbolic="YES" id="2FY-PP-kQU"/>
-                            <constraint firstItem="sWg-Z1-LZf" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="82" id="2f4-fV-JpV"/>
-                            <constraint firstItem="hV4-xE-Gw5" firstAttribute="trailing" secondItem="w01-Mi-FAP" secondAttribute="trailing" id="4aY-iM-aGZ"/>
-                            <constraint firstItem="hV4-xE-Gw5" firstAttribute="top" secondItem="HOS-fg-m0C" secondAttribute="bottom" constant="8" id="6NN-iM-d90"/>
+                            <constraint firstItem="89T-gN-YP6" firstAttribute="top" secondItem="w01-Mi-FAP" secondAttribute="top" constant="32" id="2Sw-tf-FeQ"/>
+                            <constraint firstItem="sWg-Z1-LZf" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="82" id="2f4-fV-JpV">
+                                <variation key="heightClass=compact" constant="145"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L2s-fJ-oRk" secondAttribute="trailing" constant="20" symbolic="YES" id="5it-yy-umM"/>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="centerX" secondItem="IPz-3D-6K8" secondAttribute="centerX" id="6Xc-PY-E85"/>
                             <constraint firstItem="IPz-3D-6K8" firstAttribute="centerX" secondItem="1Hy-rG-vS7" secondAttribute="centerX" id="Cd2-KL-y9h"/>
-                            <constraint firstItem="L2s-fJ-oRk" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="20" id="DtC-F6-6Xp"/>
-                            <constraint firstItem="hV4-xE-Gw5" firstAttribute="height" secondItem="1Hy-rG-vS7" secondAttribute="height" multiplier="0.3" id="Eq6-HA-Tle"/>
+                            <constraint firstItem="L2s-fJ-oRk" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="20" id="DtC-F6-6Xp">
+                                <variation key="heightClass=compact" constant="136"/>
+                            </constraint>
                             <constraint firstItem="w01-Mi-FAP" firstAttribute="trailing" secondItem="L2s-fJ-oRk" secondAttribute="trailing" constant="20" id="GEE-7U-5Xv"/>
-                            <constraint firstItem="w01-Mi-FAP" firstAttribute="trailing" secondItem="9jg-wh-pzT" secondAttribute="trailing" constant="171" id="Gdl-QH-3vY"/>
-                            <constraint firstItem="sWg-Z1-LZf" firstAttribute="baseline" secondItem="HOS-fg-m0C" secondAttribute="baseline" id="MTf-Ju-EpW"/>
-                            <constraint firstItem="Gmf-az-tTM" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="20" id="Tkb-3R-Mdl"/>
+                            <constraint firstAttribute="trailing" secondItem="89T-gN-YP6" secondAttribute="trailing" id="GvW-vf-Gfo"/>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="top" secondItem="89T-gN-YP6" secondAttribute="bottom" constant="8" symbolic="YES" id="KST-Ae-Kn7">
+                                <variation key="heightClass=compact" constant="246.5"/>
+                            </constraint>
+                            <constraint firstItem="sWg-Z1-LZf" firstAttribute="baseline" secondItem="HOS-fg-m0C" secondAttribute="baseline" constant="0.33333333333331439" id="MTf-Ju-EpW">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="centerX" secondItem="1Hy-rG-vS7" secondAttribute="centerX" id="Pxs-5x-g0N"/>
+                            <constraint firstItem="Gmf-az-tTM" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="20" id="Tkb-3R-Mdl">
+                                <variation key="heightClass=compact" constant="129"/>
+                            </constraint>
                             <constraint firstItem="Gmf-az-tTM" firstAttribute="top" secondItem="w01-Mi-FAP" secondAttribute="top" constant="54" id="U4r-zT-qxu"/>
-                            <constraint firstItem="9jg-wh-pzT" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="170" id="YG3-Kk-GQE"/>
-                            <constraint firstItem="w01-Mi-FAP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9jg-wh-pzT" secondAttribute="bottom" constant="8" id="ZRC-J8-n2j"/>
-                            <constraint firstItem="hV4-xE-Gw5" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" id="cUr-sa-BO4"/>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="top" secondItem="w01-Mi-FAP" secondAttribute="top" constant="308" id="XHM-LB-M1F"/>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="326" id="aAS-nG-CUX"/>
                             <constraint firstItem="L2s-fJ-oRk" firstAttribute="top" secondItem="Gmf-az-tTM" secondAttribute="bottom" constant="8" id="cmx-nv-lU5"/>
-                            <constraint firstItem="IPz-3D-6K8" firstAttribute="top" secondItem="L2s-fJ-oRk" secondAttribute="bottom" constant="24" id="eGp-60-axD"/>
+                            <constraint firstItem="w01-Mi-FAP" firstAttribute="bottom" secondItem="9jg-wh-pzT" secondAttribute="bottom" constant="70" id="dyS-Lg-4ya"/>
+                            <constraint firstItem="IPz-3D-6K8" firstAttribute="top" secondItem="L2s-fJ-oRk" secondAttribute="bottom" constant="24" id="eGp-60-axD">
+                                <variation key="heightClass=compact" constant="29"/>
+                            </constraint>
+                            <constraint firstItem="89T-gN-YP6" firstAttribute="leading" secondItem="1Hy-rG-vS7" secondAttribute="leading" id="gXc-9I-x31"/>
                             <constraint firstItem="w01-Mi-FAP" firstAttribute="trailing" secondItem="Gmf-az-tTM" secondAttribute="trailing" constant="20" id="m3C-1o-Ayl"/>
-                            <constraint firstItem="9jg-wh-pzT" firstAttribute="top" secondItem="hV4-xE-Gw5" secondAttribute="bottom" constant="24" id="p1b-LB-DgL"/>
-                            <constraint firstAttribute="trailing" secondItem="HOS-fg-m0C" secondAttribute="trailing" constant="96" id="wRK-I8-mnp"/>
-                            <constraint firstItem="HOS-fg-m0C" firstAttribute="top" secondItem="IPz-3D-6K8" secondAttribute="bottom" constant="7" id="wdz-vn-Zmg"/>
+                            <constraint firstItem="IPz-3D-6K8" firstAttribute="leading" secondItem="w01-Mi-FAP" secondAttribute="leading" constant="20" id="rN9-jW-WJZ">
+                                <variation key="heightClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gmf-az-tTM" secondAttribute="trailing" constant="20" symbolic="YES" id="rqt-nR-GVR"/>
+                            <constraint firstAttribute="trailing" secondItem="HOS-fg-m0C" secondAttribute="trailing" constant="97" id="wRK-I8-mnp"/>
+                            <constraint firstItem="HOS-fg-m0C" firstAttribute="top" secondItem="IPz-3D-6K8" secondAttribute="bottom" constant="16.666666666666657" id="wdz-vn-Zmg">
+                                <variation key="heightClass=compact" constant="31"/>
+                            </constraint>
+                            <constraint firstItem="9jg-wh-pzT" firstAttribute="centerX" secondItem="89T-gN-YP6" secondAttribute="centerX" id="xBj-MH-u6X"/>
+                            <constraint firstItem="89T-gN-YP6" firstAttribute="top" secondItem="HOS-fg-m0C" secondAttribute="bottom" constant="-2.6666666666666856" id="zgQ-OS-SC6">
+                                <variation key="heightClass=compact" constant="-231.5"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w01-Mi-FAP"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dyS-Lg-4ya"/>
+                                <exclude reference="rqt-nR-GVR"/>
+                                <exclude reference="5it-yy-umM"/>
+                                <exclude reference="rN9-jW-WJZ"/>
+                                <exclude reference="2Sw-tf-FeQ"/>
+                                <exclude reference="GvW-vf-Gfo"/>
+                                <exclude reference="Pxs-5x-g0N"/>
+                                <exclude reference="XHM-LB-M1F"/>
+                                <exclude reference="aAS-nG-CUX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="GEE-7U-5Xv"/>
+                                <include reference="dyS-Lg-4ya"/>
+                                <exclude reference="m3C-1o-Ayl"/>
+                                <include reference="rqt-nR-GVR"/>
+                                <include reference="5it-yy-umM"/>
+                                <exclude reference="Cd2-KL-y9h"/>
+                                <include reference="rN9-jW-WJZ"/>
+                                <include reference="2Sw-tf-FeQ"/>
+                                <include reference="GvW-vf-Gfo"/>
+                                <exclude reference="gXc-9I-x31"/>
+                                <exclude reference="zgQ-OS-SC6"/>
+                                <exclude reference="6Xc-PY-E85"/>
+                                <exclude reference="KST-Ae-Kn7"/>
+                                <include reference="Pxs-5x-g0N"/>
+                                <include reference="XHM-LB-M1F"/>
+                                <include reference="aAS-nG-CUX"/>
+                                <exclude reference="xBj-MH-u6X"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="blueButton" destination="b9N-kk-FtC" id="bgh-i8-BLb"/>
                         <outlet property="changeBackgroundButton" destination="Gmf-az-tTM" id="YM7-m7-rgc"/>
+                        <outlet property="changeTimeZones" destination="89T-gN-YP6" id="NDr-zV-vb3"/>
                         <outlet property="greenButton" destination="CnH-E1-QIZ" id="ay5-1C-UPX"/>
+                        <outlet property="militButtonTapped" destination="HOS-fg-m0C" id="9FE-TJ-Epn"/>
                         <outlet property="militaryTime" destination="HOS-fg-m0C" id="evU-L0-lis"/>
                         <outlet property="purpleButton" destination="fg7-ug-RUd" id="1Vs-yR-ydT"/>
                         <outlet property="redButton" destination="37r-bU-Tyf" id="tDC-hL-ANw"/>
                         <outlet property="settingsView" destination="1Hy-rG-vS7" id="onl-Md-2cR"/>
                         <outlet property="standardTime" destination="sWg-Z1-LZf" id="39Z-Hi-2S0"/>
-                        <outlet property="timeZones" destination="hV4-xE-Gw5" id="xah-ec-0St"/>
+                        <outlet property="stdButtonTapped" destination="sWg-Z1-LZf" id="tSo-ON-nW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-6S-sfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845.60000000000002" y="132.68365817091455"/>
+            <point key="canvasLocation" x="845.38043478260875" y="131.8840579710145"/>
         </scene>
     </scenes>
     <resources>
-        <image name="img-clock-background-6" width="333" height="333"/>
+        <image name="img-clock-background-6" width="640" height="640"/>
     </resources>
 </document>

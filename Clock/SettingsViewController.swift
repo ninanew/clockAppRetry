@@ -22,16 +22,6 @@ final class SettingsViewController: UIViewController {
     
     let timezoneArray = TimeZones.timeZonesArray
     
-//    struct TimeFormat {
-//        static let twentyFourHourFormat = "HH:mm:ss"
-//    }
-//
-//    private let dateFormatter: DateFormatter = {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = TimeFormat.twentyFourHourFormat
-//        return formatter
-//    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +39,8 @@ final class SettingsViewController: UIViewController {
         }
         updateColorSelection()
         
+        changeTimeZones.selectRow(timezoneArray[row], Int, inComponent: 0, animated: Bool)
         
-       // changeTimeZones.selectRow(<#T##row: Int##Int#>, inComponent: 0, animated: f)
     }
     
     func updateColorSelection() {
@@ -131,9 +121,6 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         UserDefaults.standard.set(timezoneArray[row], forKey: "timeZone")
         
- //   func selectRow() {
- //       row: Int; component
-            
         }
 
     }
